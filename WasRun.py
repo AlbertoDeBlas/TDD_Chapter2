@@ -6,12 +6,8 @@ class WasRun(TestCase):
         self.wasRun = None
         TestCase.__init__(self, name)
 
-    def run(self):
-        method = getattr(self, self.name)
-        method()
-
     def test_method(self):
-        pass
+        self.wasRun = 1
 
 
 test = WasRun("test_method")
