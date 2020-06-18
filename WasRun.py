@@ -9,8 +9,12 @@ class WasRun(TestCase):
     def test_method(self):
         self.wasRun = 1
 
+    def setup(self):
+        self.wasRun = None
+        self.wasSetUp = 1
 
-test = WasRun("test_method")
-print(test.wasRun)
-test.run()
-print(test.wasRun)
+
+#test = WasRun("test_method")
+#print(test.wasRun)
+#test.run()
+#print(test.wasRun)
