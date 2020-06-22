@@ -15,9 +15,12 @@ class TestCase:
     def run(self):
         result = TestResult()
         result.test_started()
-        self.setup()
-        method = getattr(self, self.name)
-        method()
+        try:
+            self.setup()
+            method = getattr(self, self.name)
+            method()
+        except:
+            result.test_failed()
         self.tear_down()
         return result
 
