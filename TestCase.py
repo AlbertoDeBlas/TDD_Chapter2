@@ -12,8 +12,7 @@ class TestCase:
     def tear_down(self):
         pass
 
-    def run(self):
-        result = TestResult()
+    def run(self, result):
         result.test_started()
         try:
             self.setup()
